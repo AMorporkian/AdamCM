@@ -2,8 +2,8 @@ import torch
 from torch.optim.optimizer import Optimizer
 from collections import deque
 class AdamCM(Optimizer):
-    def __init__(self, params, lr=1e-3, betas=(0.9, 0.999), eps=1e-14,
-                 weight_decay=0, amsgrad=False, buffer_size=10, decay=0.1):
+    def __init__(self, params, lr=1e-3, betas=(0.9, 0.999), eps=1e-8,
+                 weight_decay=0, amsgrad=False, buffer_size=10, decay=0.35):
         defaults = dict(lr=lr, betas=betas, eps=eps,
                         weight_decay=weight_decay, amsgrad=amsgrad,
                         buffer_size=buffer_size, decay=decay)
